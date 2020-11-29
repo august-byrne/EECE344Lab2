@@ -27,7 +27,7 @@ void main(void){
 
     BIOPutStrg("Program has started running\n\r");		//Program startup message
     while(1){
-    	BIOPutStrg("Hash checking program\n\r");	//Program start of loop message
+    	BIOPutStrg("Checksum checking program\n\r");	//Program start of loop message
     	is_valid = 0;
     	while (is_valid == 0){
     		BIOPutStrg("\n\rEnter the Low Address (32-bit hex address): ");	//prompt message
@@ -71,7 +71,7 @@ void main(void){
     		INT16U math_val = CalcChkSum((INT8U *)low_addr,(INT8U *)high_addr);
     		BIOOutHexHWord(math_val);
 
-    		BIOPutStrg("\n\rPress Enter to check a new hash\n\r");	//prompt message
+    		BIOPutStrg("\n\rPress Enter to check a new checksum\n\r");	//prompt message
     		is_valid = 0;
     		while (is_valid == 0){
     			char_in = BIOGetChar();		//receiving a character
